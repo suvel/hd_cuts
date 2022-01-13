@@ -1,0 +1,32 @@
+.Videos {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100vh;
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.Video {
+  position: absolute;
+  display: block;
+  height: 200px;
+  width: 370px;
+  border-radius: 20px;
+  background: linear-gradient(44deg, black, #747474);
+  box-shadow: 5px 10px 18px #00000080;
+}
+
+.Video::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(/asset/images/play_btn.svg);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50px, -50px);
+}
