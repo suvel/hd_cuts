@@ -2,19 +2,8 @@
   background-image: url("../asset/images/background_img.svg");
   height: 100vh;
   width: 100vw;
-}
-
-.black-ribbon {
-  position: absolute;
-  display: block;
-  width: 500px;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background: black;
-  transform: skewX(19deg);
-  z-index: 1;
-  opacity: 70%;
+  overflow: hidden;
+  position: relative;
 }
 
 .App::before {
@@ -27,4 +16,45 @@
   background: linear-gradient(226deg, red, #000000);
   opacity: 70%;
   z-index: 0;
+}
+
+.black-ribbon {
+  position: absolute;
+  display: block;
+  width: 500px;
+  height: 100vh;
+  background: black;
+  transform: skewX(19deg);
+  z-index: 1;
+  opacity: 70%;
+}
+
+.black-ribbon.cascade {
+  animation-name: v_animation;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes v_animation {
+  0% {
+    top: 0;
+    left: 0;
+    left: 0px;
+    top: 0px;
+    opacity: 70%;
+  }
+  50% {
+    right: 300px;
+    top: 100vh;
+    opacity: 0%;
+    transform: skewX(-19deg);
+    opacity: 0%;
+  }
+  100% {
+    transform: skewX(-19deg);
+    right: 0px;
+    top: 0px;
+    opacity: 70%;
+  }
 }
