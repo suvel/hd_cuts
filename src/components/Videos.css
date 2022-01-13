@@ -108,6 +108,7 @@
   100% {
     top: -500px;
     opacity: 0%;
+    visibility: hidden;
   }
 }
 
