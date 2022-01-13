@@ -11,7 +11,7 @@ function Videos() {
   const { vMode, vModeTypes, setVMode } = useContext(GlobalContext);
   return (
     <div className={`Videos`}>
-      <div className={`Video_container ${vMode}`}>
+      <div className={`widget_container ${vMode}`}>
         <Video style={{ marginLeft: "40px", marginTop: "40px" }} />
         <Video style={{ marginLeft: "20px", marginTop: "20px" }} />
         <Video
@@ -19,6 +19,12 @@ function Videos() {
             setVMode(vModeTypes.CASCADE);
           }}
         />
+      </div>
+      <div className={`cascade_container ${vMode}`}>
+        <Video />
+        <Video />
+        <Video />
+        <Video />
       </div>
     </div>
   );
