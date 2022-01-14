@@ -36,6 +36,13 @@
   animation-fill-mode: forwards;
 }
 
+.black-ribbon.theater {
+  animation-name: fill_animation;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
 @keyframes v_animation {
   0% {
     left: 0px;
@@ -54,5 +61,25 @@
     right: 0px;
     top: 0px;
     opacity: 70%;
+  }
+}
+
+@keyframes fill_animation {
+  0% {
+    transform: skewX(-19deg);
+    right: 0%;
+    opacity: 70%;
+  }
+  50% {
+    transform: skewX(-10deg);
+    right: 50%;
+    transform: translate(-250px);
+    width: 50vw;
+  }
+  100% {
+    transform: skewX(0deg);
+    left: 0px;
+    width: 100vw;
+    opacity: 100%;
   }
 }

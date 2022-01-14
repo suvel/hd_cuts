@@ -21,10 +21,33 @@ function Videos() {
         />
       </div>
       <div className={`cascade_container ${vMode}`}>
-        <Video />
-        <Video />
-        <Video />
-        <Video />
+        <Video
+          triggerCascade={() => {
+            setVMode(vModeTypes.THEATER);
+          }}
+        />
+        <Video
+          triggerCascade={() => {
+            setVMode(vModeTypes.THEATER);
+          }}
+        />{" "}
+        <Video
+          triggerCascade={() => {
+            setVMode(vModeTypes.THEATER);
+          }}
+        />{" "}
+        <Video
+          triggerCascade={() => {
+            setVMode(vModeTypes.THEATER);
+          }}
+        />
+      </div>
+      <div className={`theater_container ${vMode}`}>
+        <iframe
+          width="100%" 
+          height="100%" 
+          src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        ></iframe>
       </div>
     </div>
   );

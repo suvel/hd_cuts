@@ -57,6 +57,14 @@
   position: relative;
 }
 
+.theater_container {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 500px;
+  height: 272px;
+}
+
 .Video {
   position: absolute;
   display: block;
@@ -80,6 +88,10 @@
   transform: translate(-50px, -50px);
 }
 
+.widget_container.theater {
+  display: none;
+}
+
 .widget_container.cascade {
   animation-name: fly_up;
   animation-duration: 3s;
@@ -88,7 +100,7 @@
 }
 
 .cascade_container.widget {
-  visibility: hidden;
+  display: none;
 }
 
 .cascade_container.cascade {
@@ -98,6 +110,28 @@
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
   animation-delay: 1s;
+}
+
+.cascade_container.theater {
+  animation-name: fall;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-delay: 5s;
+}
+
+.theater_container.cascade {
+  display: none;
+}
+
+.theater_container.theater {
+  opacity: 0%;
+  animation-name: land;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 7s;
 }
 
 @keyframes fly_up {
@@ -122,6 +156,33 @@
     transform: skewX(-19deg);
     right: 0px;
     top: 0px;
+    opacity: 100%;
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: skewX(-19deg);
+    right: 0px;
+    top: 0px;
+    opacity: 100%;
+  }
+  100% {
+    right: 300px;
+    top: 100vh;
+    opacity: 0%;
+    transform: skewX(19deg);
+  }
+}
+
+@keyframes land {
+  0% {
+    top: -500px;
+    opacity: 0%;
+    visibility: hidden;
+  }
+  100% {
+    /* top: 10%; */
     opacity: 100%;
   }
 }

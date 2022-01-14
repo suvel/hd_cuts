@@ -6,7 +6,7 @@ const videoModes = {
   WIDGET: "widget",
   CASCADE: "cascade",
   THEATER: "theater",
-  default: "widget",
+  default: "theater",
 };
 
 export const GlobalProvider = ({ children }) => {
