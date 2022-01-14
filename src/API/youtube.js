@@ -8,6 +8,5 @@ export function getPopularVideo(limit) {
   url.searchParams.append("part", "snippet,id");
   url.searchParams.append("order", "rating");
   url.searchParams.append("maxResults", `${limit}`);
-  debugger;
   return fetch(url);
 }

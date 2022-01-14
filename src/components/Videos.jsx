@@ -9,11 +9,11 @@ function Video({ style, triggerCascade }) {
 //styles={marginLeft: "10px", marginTop: "10px" }
 
 function Videos() {
-  const { vMode, vModeTypes, setVMode } = useContext(GlobalContext);
+  const { vMode, vModeTypes, setVMode, theaterVideo, setTheaterVideo } =
+    useContext(GlobalContext);
 
   const [popVidImg, setPopVidImg] = useState("");
   const [top10Vid, setTop10Vid] = useState([]);
-  const [selectedVidId, setSelectedVideoId] = useState("");
 
   async function updatePopularVideoImg() {
     const response = await getPopularVideo(1);
@@ -31,6 +31,8 @@ function Videos() {
       return {
         id: vid.id.videoId,
         thumb: vid.snippet.thumbnails.high.url,
+        title: vid.snippet.title,
+        desc: vid.snippet.description,
       };
     });
     setTop10Vid(topTenVideos);
@@ -58,6 +60,7 @@ function Videos() {
           }}
         />
       </div>
+      {/* <label>Watch top rated videos💖</label> */}
       <div className={`cascade_container ${vMode}`}>
         {top10Vid.map((vid) => {
           return (
@@ -65,18 +68,20 @@ function Videos() {
               style={{ backgroundImage: `url(${vid.thumb})` }}
               triggerCascade={() => {
                 setVMode(vModeTypes.THEATER);
-                setSelectedVideoId(vid.id);
+                setTheaterVideo(vid);
               }}
             />
           );
         })}
       </div>
       <div className={`theater_container ${vMode}`}>
-        <iframe
-          width="100%"
-          height="100%"
-          src={`https://www.youtube.com/embed/${selectedVidId}`}
-        ></iframe>
+        {theaterVideo?.id && (
+          <iframe
+            width="100%"
+            height="100%"
+            src={`https://www.youtube.com/embed/${theaterVideo?.id}`}
+          ></iframe>
+        )}
       </div>
     </div>
   );
