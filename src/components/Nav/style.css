@@ -1,0 +1,9 @@
+.Nav.disabletrue {
+  visibility: hidden;
+}
+.Nav {
+  cursor: pointer;
+}
+.Nav:hover {
+  text-decoration: underline;
+}

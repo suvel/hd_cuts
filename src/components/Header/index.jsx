@@ -1,14 +1,7 @@
 import React, { useContext } from "react";
-import "./Header.css";
-import GlobalContext from "../context/GlobalContext";
-
-const Nav = ({ children, navigate, disable }) => {
-  return (
-    <div className={`Nav disable${disable}`} onClick={navigate}>
-      {children}
-    </div>
-  );
-};
+import "./style.css";
+import GlobalContext from "../../context/GlobalContext";
+import Nav from "../Nav";
 
 const Header = () => {
   const { vModeTypes, setVMode, vMode } = useContext(GlobalContext);
