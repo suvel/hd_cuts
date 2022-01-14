@@ -14,18 +14,18 @@ function Videos() {
   const [top10Vid, setTop10Vid] = useState([]);
 
   async function updatePopularVideoImg() {
-    const response = await getPopularVideo(1);
-    const jsonResponse = await response.json();
-    // const jsonResponse = getPopularVideo_Mockup();
+    // const response = await getPopularVideo(1);
+    // const jsonResponse = await response.json();
+    const jsonResponse = getPopularVideo_Mockup();
     const mostPopularVideoThumb =
       jsonResponse.items[0].snippet.thumbnails.high.url;
     setPopVidImg(mostPopularVideoThumb);
   }
 
   async function updateTopTenVideo() {
-    const response = await getPopularVideo(10);
-    const jsonResponse = await response.json();
-    // const jsonResponse = getPopularVideo_Mockup();
+    // const response = await getPopularVideo(10);
+    // const jsonResponse = await response.json();
+    const jsonResponse = getPopularVideo_Mockup();
     const videDetails = jsonResponse.items;
     const topTenVideos = videDetails.map(function (vid) {
       return {
