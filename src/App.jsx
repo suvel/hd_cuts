@@ -1,8 +1,9 @@
-import { useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 import "./App.css";
 import Footer from "./components/Footer";
 import Content from "./components/Content";
 import Videos from "./components/Videos";
+
 
 import GlobalContext, { GlobalProvider } from "./context/GlobalContext";
 
@@ -12,7 +13,7 @@ function Ribbon() {
 }
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <div className="App">
