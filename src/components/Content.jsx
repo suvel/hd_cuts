@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "./Content.css";
 import GlobalContext from "../context/GlobalContext";
-const Header = ({ children }) => {
-  return <div className="Header">{children}</div>;
+const Heading = ({ children }) => {
+  return <div className="Heading">{children}</div>;
 };
 
 const Content = () => {
@@ -16,7 +16,7 @@ const Content = () => {
     <div className="Content">
       {isWidgetMode && (
         <>
-          <Header>Hi!</Header>
+          <Heading>Hi!</Heading>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
