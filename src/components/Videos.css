@@ -121,7 +121,8 @@
   animation-delay: 5s;
 }
 
-.theater_container.cascade {
+.theater_container.cascade,
+.theater_container.widget {
   display: none;
 }
 
@@ -179,10 +180,9 @@
   0% {
     top: -500px;
     opacity: 0%;
-    visibility: hidden;
   }
   100% {
-    /* top: 10%; */
+    top: 0%;
     opacity: 100%;
   }
 }
