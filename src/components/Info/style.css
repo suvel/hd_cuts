@@ -1,24 +1,11 @@
-.Content {
+.Info {
   color: white;
-
   display: flex;
   flex-direction: column;
   width: 30%;
   height: 100vh;
   justify-content: center;
-
   margin-left: 20px;
-
   z-index: 2;
   position: relative;
-}
-
-.Content p {
-  width: 43ch;
-  font-size: 2ch;
-}
-
-.Heading {
-  font-size: 8ch;
-  font-weight: bolder;
 }

@@ -1,0 +1,10 @@
+.Videos {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100vh;
+  width: 50%;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}

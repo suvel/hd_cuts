@@ -1,0 +1,32 @@
+.TheaterView {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 500px;
+  height: 272px;
+}
+
+.TheaterView.cascade,
+.TheaterView.widget {
+  display: none;
+}
+
+.TheaterView.theater {
+  opacity: 0%;
+  animation-name: land;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 7s;
+}
+
+@keyframes land {
+  0% {
+    top: -500px;
+    opacity: 0%;
+  }
+  100% {
+    top: 0%;
+    opacity: 100%;
+  }
+}

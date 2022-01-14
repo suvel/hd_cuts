@@ -1,0 +1,30 @@
+.VideoCollectionWidget {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 500px;
+  height: 272px;
+}
+
+.VideoCollectionWidget.theater {
+  display: none;
+}
+
+.VideoCollectionWidget.cascade {
+  animation-name: fly_up_animation;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fly_up_animation {
+  0% {
+    top: 10%;
+    opacity: 100%;
+  }
+  100% {
+    top: -500px;
+    opacity: 0%;
+    visibility: hidden;
+  }
+}

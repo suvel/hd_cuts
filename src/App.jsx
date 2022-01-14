@@ -1,6 +1,6 @@
 import "./App.css";
 import Footer from "./components/Footer";
-import Content from "./components/Content";
+import Info from "./components/Info";
 import Videos from "./components/Videos";
 import Header from "./components/Header";
 import Ribbon from "./components/Ribbon";
@@ -12,7 +12,7 @@ function App() {
       <GlobalProvider>
         <Header />
         <Ribbon />
-        <Content />
+        <Info />
         <Videos />
         <Footer />
       </GlobalProvider>
